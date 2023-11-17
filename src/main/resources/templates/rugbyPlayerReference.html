@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Rugby Players Reference</title>
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/rugbyPlayerReference.css}">
+</head>
+<body>
+<div class="header-container">
+    <h1>選手検索メニュー</h1>
+    <a href="/rugbyPlayers" class="nav-button">チーム別選手一覧へ</a>
+    <a href="/rugbyPlayers/average" class="nav-button">チーム別平均データへ</a>
+</div>
+<!-- 検索フォーム -->
+<div class="search-form">
+    <form th:action="@{/rugbyPlayers/reference}" method="get">
+        <div class="form-field">
+            <label for="height">身長：</label>
+            <input type="number" id="height" name="height" placeholder="身長を入力"
+                   class="input-small">
+        </div>
+
+        <div class="form-field">
+            <label for="weight">体重：</label>
+            <input type="number" id="weight" name="weight" placeholder="体重を入力"
+                   class="input-small">
+        </div>
+
+        <div class="form-field">
+            <label for="position">ポジション:</label>
+            <select id="position" name="rugbyPosition" class="input-small">
+                <option value="">ポジションを選択</option>
+                <option th:each="position : ${positions}" th:value="${position}" th:text="${position}">ポジション：
+                </option>
+            </select>
+        </div>
+
+        <button type="submit" class="search-button">選手を表示</button>
+    </form>
+</div>
+
+<!-- 検索結果の表示 -->
+<div th:each="nationalityEntry : ${players}">
+    <h2 th:text="${nationalityEntry.key}">Nationality</h2>
+    <table>
+        <!-- テーブルヘッダ -->
+        <thead>
+        <tr>
+            <th>名前</th>
+            <th>身長</th>
+            <th>体重</th>
+            <th>ポジション</th>
+        </tr>
+        </thead>
+        <!-- テーブルボディ -->
+        <tbody>
+        <!-- 各プレイヤーの情報を表示 -->
+        <tr th:each="player : ${nationalityEntry.value}">
+            <td th:text="${player.name}">Player Name</td>
+            <td th:text="${player.height} + ' cm'">Player Height</td>
+            <td th:text="${player.weight} + ' kg'">Player Weight</td>
+            <td th:text="${player.rugbyPosition}">Player Position</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

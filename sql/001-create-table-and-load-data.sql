@@ -1,11 +1,11 @@
-DROP TABLE IF EXISTS rugby_players;
+DROP TABLE IF EXISTS rugby_players_world_cup;
 
-CREATE TABLE rugby_players (
+CREATE TABLE rugby_players_world_cup (
   id VARCHAR(30) NOT NULL,
   nationality VARCHAR(30) NOT NULL,
   name VARCHAR(50) NOT NULL,
-  height int(5),
-  weight int(5),
-  rugby_position VARCHAR(5),
+  height INT(5),
+  weight INT(5),
+  rugby_position VARCHAR(50),
   PRIMARY KEY(id)
 );

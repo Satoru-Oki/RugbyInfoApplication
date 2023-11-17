@@ -1,0 +1,121 @@
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    background-color: #e7e7e7;
+    background-image: url('../css/publicdomainq-0003262xrwkpw.jpg');
+       background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+    margin: 0;
+    padding: 20px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    color: white;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 40px;
+    flex-grow: 1;
+    color: white;
+}
+
+.nav-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #5cb85c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.nav-button:hover {
+    background-color: #4cae4c;
+}
+
+.search-form {
+    text-align: left;
+    color:white;
+}
+
+.form-inline {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color:white;
+}
+
+.form-field {
+    display: inline-block;
+    margin-right: 20px;
+    color: white;
+}
+
+.input-small {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.search-button:hover {
+    background-color: #4cae4c;
+}
+
+table {
+    width: 55%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+h2 {
+    color: white;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+    background-color: #fff;
+}
+
+th {
+    background-color: #666;
+    color: white;
+    font-size: 20px;
+}
+
+.nav-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #5cb85c;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+     margin-right: 10px;
+}
+
+.nav-button:hover {
+    background-color: #4cae4c;
+}

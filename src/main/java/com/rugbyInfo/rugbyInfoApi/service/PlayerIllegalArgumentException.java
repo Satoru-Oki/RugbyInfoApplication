@@ -1,4 +1,4 @@
-package com.rugbyInfo.rugbyInfoApi.Service;
+package com.rugbyInfo.rugbyInfoApi.service;
 
 public class PlayerIllegalArgumentException extends RuntimeException {
     public PlayerIllegalArgumentException(String message) {

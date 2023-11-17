@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Rugby Player Averages</title>
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/rugbyPlayerAverages.css}">
+    <script th:src="@{/css/sortTableRows.js}"></script>
+</head>
+<body>
+<div class="header-container">
+    <h1>チーム別平均データ</h1>
+    <div class="button-group">
+        <a href="/rugbyPlayers" class="nav-button">チーム別選手一覧へ</a>
+        <a href="/rugbyPlayers/reference" class="nav-button">選手検索メニューへ</a>
+    </div>
+</div>
+
+<div th:each="nationality : ${nationalities}">
+    <h2 th:text="${nationality}"></h2>
+
+
+    <table th:id="'table-' + ${nationality}">
+        <thead>
+        <tr>
+            <th>グループ別</th>
+            <th>平均身長</th>
+            <th>平均体重</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="average : ${averages}" th:if="${average.nationality.equals(nationality)}">
+            <td th:text="${average.positionGroup}"></td>
+            <td th:text="${average.averageHeight} + ' cm'"></td>
+            <td th:text="${average.averageWeight} + ' kg'"></td>
+        </tr>
+        </tbody>
+    </table>
+    <script th:src="@{/js/sortTableRows.js}"></script>
+</div>
+</body>
+</html>

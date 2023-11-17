@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update rugby Player</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Open+Sans:wght@600&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/playerUpdateForm.css}">
+</head>
+<body>
+<div class="header-container">
+    <h1>選手修正</h1>
+
+    <form th:action="@{/rugbyPlayers/edit/{id}(id=${playerUpdateForm.id})}" th:object="${playerUpdateForm}"
+          method="post">
+
+        <input type="hidden" name="_method" value="PATCH"/>
+
+        <div>
+            <label for="nationality">チーム名:</label>
+            <input type="text" id="nationality" th:field="*{nationality}"/>
+        </div>
+        <div>
+            <label for="name">名前:</label>
+            <input type="text" id="name" th:field="*{name}"/>
+        </div>
+        <div>
+            <label for="height">身長:</label>
+            <input type="text" id="height" th:field="*{height}"/>
+        </div>
+        <div>
+            <label for="weight">体重:</label>
+            <input type="text" id="weight" th:field="*{weight}"/>
+        </div>
+        <div>
+            <label for="rugbyPosition">ポジション:</label>
+            <input type="text" id="rugbyPosition" th:field="*{rugbyPosition}"/>
+        </div>
+        <div>
+            <input type="submit" value="選手情報を更新"/>
+        </div>
+    </form>
+
+</div>
+</body>
+</html>

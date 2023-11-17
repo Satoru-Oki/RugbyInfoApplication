@@ -1,4 +1,4 @@
-package com.rugbyInfo.rugbyInfoApi.Controller;
+package com.rugbyInfo.rugbyInfoApi.controller;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
@@ -9,6 +9,8 @@ import lombok.Getter;
 @Getter
 @EqualsAndHashCode
 public class PlayerDataResponse {
+
+    private String id;
 
     private String nationality;
 

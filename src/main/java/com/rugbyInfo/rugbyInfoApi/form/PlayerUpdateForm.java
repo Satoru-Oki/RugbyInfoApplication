@@ -5,10 +5,15 @@ import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@NoArgsConstructor
 @AllArgsConstructor
 @Getter
+@Setter
 public class PlayerUpdateForm {
+    private String id;
 
     private String nationality;
 

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Rugby Players</title>
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/rugbyPlayers.css}">
+
+</head>
+<body>
+<div class="header-container">
+    <h1>チーム別選手一覧</h1>
+    <a href="/rugbyPlayers/reference" class="nav-button">選手検索メニューへ</a>
+    <a href="/rugbyPlayers/average" class="nav-button">チーム別平均データへ</a>
+    <a href="/rugbyPlayers/new" class="nav-button">選手登録へ</a>
+</div>
+
+<div class="search-form">
+    <form th:action="@{/rugbyPlayers}" method="get" class="form-inline">
+        <select class="form-select" name="nationality">
+            <option value="">- チームを選択してください -</option>
+            <option th:each="nation : ${nationalities}" th:value="${nation}" th:text="${nation}">Team</option>
+        </select>
+        <button class="submit-button" type="submit">選手を表示</button>
+    </form>
+</div>
+<div th:if="${message}" class="popup" id="messagePopup">
+    <div class="popup-content">
+        <p th:text="${message}"></p>
+        <button onclick="closePopup()">OK</button>
+    </div>
+</div>
+
+<div th:each="nationalityGroups : ${groupedPlayers.entrySet()}">
+    <div class="nationality-header">
+        <h2 th:text="${nationalityGroups.key}">Nationality</h2>
+    </div>
+    <div th:each="categoryGroup : ${nationalityGroups.value}">
+        <h3 class="category-header" th:text="${categoryGroup.category}">Category</h3>
+        <table>
+            <tr>
+                <th>名前</th>
+                <th>身長</th>
+                <th>体重</th>
+                <th>ポジション</th>
+            </tr>
+            <tbody>
+            <tr th:each="player : ${categoryGroup.players}">
+                <td th:text="${player.name}">Name</td>
+                <td th:text="${player.height} + ' cm'">Height</td>
+                <td th:text="${player.weight} + ' kg'">Weight</td>
+                <td th:text="${player.rugbyPosition}">Position</td>
+                <td style="background-color: inherit; display: flex; align-items: center; gap: 5px;">
+                    <a th:href="@{/rugbyPlayers/edit/{id}(id=${player.id})}" class="edit-button">編集</a>
+                    <form th:action="@{/rugbyPlayers/delete/{id}(id=${player.id})}" method="post">
+                        <input type="hidden" name="_method" value="DELETE"/>
+                        <input type="submit" value="削除" class="delete-button"
+                               onclick="return confirm('本当に削除してよいですか？');"/>
+                    </form>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    function closePopup() {
+        document.getElementById('messagePopup').style.display = 'none';
+    }
+
+    window.onload = function() {
+        if (document.getElementById('messagePopup')) {
+            document.getElementById('messagePopup').style.display = 'block';
+        }
+    }
+</script>
+</body>
+</html>

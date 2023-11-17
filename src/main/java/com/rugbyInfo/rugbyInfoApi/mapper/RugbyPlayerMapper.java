@@ -1,5 +1,6 @@
 package com.rugbyInfo.rugbyInfoApi.mapper;
 
+import com.rugbyInfo.rugbyInfoApi.controller.PositionGroupAverageResponse;
 import com.rugbyInfo.rugbyInfoApi.entity.RugbyPlayer;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
@@ -15,15 +16,32 @@ import java.util.Optional;
 @Mapper
 public interface RugbyPlayerMapper {
 
-    @Insert("INSERT INTO rugby_players (id, nationality, name, height, weight, rugby_position) VALUES (#{id}, #{nationality}, #{name}, #{height}, #{weight}, #{rugbyPosition})")
+    @Insert("INSERT INTO rugby_players_world_cup (id, nationality, name, height, weight, rugby_position) VALUES (#{id}, #{nationality}, #{name}, #{height}, #{weight}, #{rugbyPosition})")
     void insertPlayerData(RugbyPlayer playerData);
 
-    //データを重複させずにデータベースに登録する処理(insertRugbyPlayers)で使用
-    @Select("SELECT * FROM rugby_players WHERE id = #{id}")
+    @Select("SELECT COUNT(*) FROM rugby_players_world_cup")
+    int countPlayers();
+
+    @Select("SELECT DISTINCT nationality FROM rugby_players_world_cup")
+    List<String> findDistinctNationalities();
+
+    @Select("SELECT DISTINCT rugby_position FROM rugby_players_world_cup")
+    List<String> findDistinctRugbyPositions();
+    
+    @Select("SELECT * FROM rugby_players_world_cup")
+    List<RugbyPlayer> findAllPlayers();
+
+    @Select("SELECT * FROM rugby_players_world_cup WHERE nationality = #{nationality}")
+    List<RugbyPlayer> findPlayersByNationality(String nationality);
+
+    @Select("SELECT * FROM rugby_players_world_cup WHERE id = #{id}")
     Optional<RugbyPlayer> findPlayerById(String id);
 
     @SelectProvider(type = RugbyPlayerSqlProvider.class, method = "referencePlayers")
-    List<RugbyPlayer> findPlayersByReference(String nationality, String name, Integer height, Integer weight, String rugbyPosition);
+    List<RugbyPlayer> findPlayersByReference(Integer height, Integer weight, String rugbyPosition);
+
+    @SelectProvider(type = RugbyPlayerSqlProvider.class, method = "findAverageByPositionGroupAndNationality")
+    List<PositionGroupAverageResponse> findAverageByPositionGroupAndNationality();
 
     @UpdateProvider(type = RugbyPlayerSqlProvider.class, method = "updateRugbyPlayer")
     void updateRugbyPlayer(@Param("id") String id,
@@ -33,6 +51,6 @@ public interface RugbyPlayerMapper {
                            @Param("weight") Integer weight,
                            @Param("rugbyPosition") String rugbyPosition);
 
-    @Delete("DELETE FROM rugby_players WHERE id = #{id}")
+    @Delete("DELETE FROM rugby_players_world_cup WHERE id = #{id}")
     void deleteRugbyPlayer(String id);
 }

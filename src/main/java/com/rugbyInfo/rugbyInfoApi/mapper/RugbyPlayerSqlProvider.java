@@ -3,6 +3,7 @@ package com.rugbyInfo.rugbyInfoApi.mapper;
 import org.apache.ibatis.jdbc.SQL;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -11,15 +12,7 @@ public class RugbyPlayerSqlProvider {
     public String referencePlayers(Map<String, Object> params) {
         return new SQL() {{
             SELECT("*");
-            FROM("rugby_players");
-
-            if (params.get("nationality") != null) {
-                WHERE("nationality = #{nationality}");
-            }
-
-            if (params.get("name") != null) {
-                WHERE("name = #{name}");
-            }
+            FROM("rugby_players_world_cup");
 
             if (params.get("height") != null) {
                 WHERE("height >= #{height}");
@@ -33,9 +26,27 @@ public class RugbyPlayerSqlProvider {
         }}.toString();
     }
 
+    public String findAverageByPositionGroupAndNationality() {
+
+        List<String> fwPositions = Arrays.asList("PR", "HO", "L", "BR", "FL", "N8");
+        List<String> bkPositions = Arrays.asList("SH", "HB", "C", "W", "FB");
+
+        String sqlQuery = new SQL() {{
+            SELECT("nationality",
+                    "CASE WHEN rugby_position IN ('PR', 'HO', 'L', 'BR', 'FL') THEN 'FW' ELSE 'BK' END AS positionGroup",
+                    "ROUND(AVG(height)) AS averageHeight",
+                    "ROUND(AVG(weight)) AS averageWeight");
+            FROM("rugby_players_world_cup");
+            WHERE("height IS NOT NULL AND weight IS NOT NULL");
+            GROUP_BY("nationality, positionGroup");
+        }}.toString();
+
+        return sqlQuery;
+    }
+
     public String updateRugbyPlayer(Map<String, Object> params) {
         StringBuilder sql = new StringBuilder();
-        sql.append("UPDATE rugby_players SET ");
+        sql.append("UPDATE rugby_players_world_cup SET ");
 
         List<String> updates = new ArrayList<>();
 

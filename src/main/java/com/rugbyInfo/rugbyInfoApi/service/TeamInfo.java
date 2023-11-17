@@ -1,10 +1,11 @@
-package com.rugbyInfo.rugbyInfoApi.Service;
+package com.rugbyInfo.rugbyInfoApi.service;
 
 import com.rugbyInfo.rugbyInfoApi.entity.RugbyPlayer;
 
 import java.util.List;
 
 class TeamInfo {
+
     private List<RugbyPlayer> players;
 
     public List<RugbyPlayer> getPlayers() {
@@ -14,4 +15,5 @@ class TeamInfo {
     public void setPlayers(List<RugbyPlayer> players) {
         this.players = players;
     }
+
 }

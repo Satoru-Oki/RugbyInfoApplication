@@ -1,0 +1,72 @@
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    background-color: #e7e7e7;
+    background-image: url('../css/publicdomainq-0003262xrwkpw.jpg');
+       background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+    margin: 0;
+    padding: 30px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+   justify-content: space-between;
+    margin-bottom: 10px;
+    color: white;
+}
+.button-group {
+    display: flex;
+}
+h1 {
+    margin: 5px;
+    font-size: 40px;
+    color: white;
+    flex-shrink: 0
+}
+
+.nav-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #5cb85c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+   margin-right: 10px;
+}
+
+.nav-button:last-child {
+    margin-right: 0;
+}
+.nav-button:hover {
+    background-color: #4cae4c;
+}
+h2 {
+ color: white;
+    margin-top: 30px;
+    margin-left:70px
+    margin-bottom: 20px;
+}
+
+table {
+    width: 55%;
+    margin-top: 50px
+    margin-left:70px
+    margin-right: 70px;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    background-color: #fff;
+}
+
+th {
+    background-color: #666;
+    color: white;
+}
