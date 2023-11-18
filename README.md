@@ -24,3 +24,26 @@
 - MyBatis 3.5.13
 - MySQL 8.0
 - Docker 24.0.6
+  
+### DB定義
+テーブル名：rugby_players_world_cup
+|カラム名|データ型|キー|備考|
+| ---- | ---- | ---- | ----|
+| id | VARCHAR(30) | PRIMARY KEY|登録時自動生成|
+| nationality | VARCHAR(30) | |
+| name | VARCHAR(50) |||
+| height | INT(5) |
+| weight | INT(5) |
+| rugby_position | VARCHAR(50) ||
+
+### URL一覧
+
+<img width="567" alt="image" src="https://github.com/Satoru-Oki/RugbyInfoApplication/assets/143796169/d6674197-c633-4fc1-90bf-929372c8c38e">
+
+
+
+
+
+
+
+
