@@ -12,7 +12,14 @@
   - 国別にFW（フォワード）,BK（バックス）の平均身長、体重を表示できる
   - 新しいチーム,選手を登録できる
   - 既存の選手の修正,削除ができる
-- 
 
 ### Application 概要図
 ![概要図ファイル drawio (1)](https://github.com/Satoru-Oki/RugbyInfoApplication/assets/143796169/1d09b93a-eef3-4317-b653-b74436bf56fa)
+
+### 技術構成
+- Java 17
+- Spring Boot 3.1.4
+- Thymeleaf 3.1.2
+- Tomcat(Embedded) 10.1.13
+- MyBatis 3.5.13
+- MySQL 8.0
