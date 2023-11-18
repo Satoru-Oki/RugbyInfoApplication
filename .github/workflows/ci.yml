@@ -24,9 +24,12 @@ jobs:
 
       - name: Docker run
         run: docker compose up -d
+
+　　　- name: Set executable permission for gradlew
+ 　　　 run: chmod +x ./gradlew
         
       - name: Test with Gradle
-        run: ./gradlew test
+        run: bash ./gradlew test
         if: always()
 
       - name: Publish Test Report
