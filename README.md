@@ -1,7 +1,8 @@
 ## RugbyInfoApplication
+<img width="600" alt="image" src="https://github.com/Satoru-Oki/RugbyInfoApplication/assets/143796169/cee51615-75a5-4347-995b-c433f1bdd26d">
 
-### Applicationの概要  
-外部のAPIに接続し、ラグビーワールドカップ出場国選手のデータを検索・閲覧でき、また任意のチーム・選手を登録できるアプリケーション
+### 概要  
+外部のAPIに接続し、ラグビーワールドカップ出場国選手のデータを検索・閲覧でき、任意のチーム・選手を登録できるアプリケーション
 
 - 機能  
   - Rugby_v3　"https://developer.sportradar.com/docs/read/rugby/Rugby_v3"  からデータ取得  
