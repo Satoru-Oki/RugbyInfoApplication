@@ -26,7 +26,7 @@ jobs:
         run: docker compose up -d
         
       - name: Test with Gradle
-        run: ./gradlew test
+        run: bash ./gradlew test
         if: always()
 
       - name: Publish Test Report
