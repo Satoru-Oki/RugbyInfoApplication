@@ -1,4 +1,4 @@
-name: rugby-info-api
+name: rugby-info-api-ci
 
 on:
   push:
