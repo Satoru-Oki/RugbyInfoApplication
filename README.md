@@ -40,7 +40,7 @@
 
 <img width="567" alt="image" src="https://github.com/Satoru-Oki/RugbyInfoApplication/assets/143796169/d6674197-c633-4fc1-90bf-929372c8c38e">
 
-
+### DEMO
 
 
 
