@@ -41,6 +41,9 @@
 <img width="567" alt="image" src="https://github.com/Satoru-Oki/RugbyInfoApplication/assets/143796169/d6674197-c633-4fc1-90bf-929372c8c38e">
 
 ### DEMO
+チーム別選手表示 
+
+![表示 (6)](https://github.com/Satoru-Oki/RugbyInfoApplication/assets/143796169/a04ea8da-1d5f-4017-b02e-8e3b0336fab7)
 
 
 
