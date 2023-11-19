@@ -49,6 +49,10 @@
 
 ![選手検索 (1)](https://github.com/Satoru-Oki/RugbyInfoApplication/assets/143796169/a1b53bb0-a234-488d-a6e9-b0352dd03871)
 
+チーム別平均データ
+
+![チーム別平均データ](https://github.com/Satoru-Oki/RugbyInfoApplication/assets/143796169/eb456ad0-577b-41b9-9726-0ab58d47b1d6)
+
 選手更新/削除
 
 ![選手更新削除](https://github.com/Satoru-Oki/RugbyInfoApplication/assets/143796169/2d4a0768-5860-4c54-8f6c-6c636a0b51e2)
