@@ -57,7 +57,10 @@
 
 ![選手登録 (1)](https://github.com/Satoru-Oki/RugbyInfoApplication/assets/143796169/3b1fa986-e893-498d-b1e7-0b2a00e3fc2b)
 
-
+### 今後について
+- デプロイ
+- Https化
+など
 
 
 
