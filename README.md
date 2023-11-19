@@ -43,7 +43,15 @@
 ### DEMO
 チーム別選手表示 
 
-![表示 (6)](https://github.com/Satoru-Oki/RugbyInfoApplication/assets/143796169/a04ea8da-1d5f-4017-b02e-8e3b0336fab7)
+![表示 (6)](https://github.com/Satoru-Oki/RugbyInfoApplication/assets/143796169/a04ea8da-1d5f-4017-b02e-8e3b0336fab7) 
+
+選手検索 
+
+![選手検索 (1)](https://github.com/Satoru-Oki/RugbyInfoApplication/assets/143796169/a1b53bb0-a234-488d-a6e9-b0352dd03871)
+
+選手更新/削除
+
+![選手更新削除](https://github.com/Satoru-Oki/RugbyInfoApplication/assets/143796169/2d4a0768-5860-4c54-8f6c-6c636a0b51e2)
 
 
 
