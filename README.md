@@ -14,7 +14,7 @@
   - 既存の選手の修正,削除ができる
 
 ### Application 概要図
-![概要図ファイル drawio (1)](https://github.com/Satoru-Oki/RugbyInfoApplication/assets/143796169/1d09b93a-eef3-4317-b653-b74436bf56fa)
+![概要図ファイル drawio (2)](https://github.com/Satoru-Oki/RugbyInfoApplication/assets/143796169/75bfec0e-e97d-466b-a8bd-8e030ddafc21)
 
 ### 技術構成
 - Java 17
