@@ -12,14 +12,14 @@
   - ラグビーワールドカップ2023出場20ヶ国の選手データを利用できる
   - チーム毎に選手を表示できる（名前・身長・体重・ポジションを表示）
   - 身長・体重・ポジションの組み合わせで選手を検索できる
-  - 国別にFW（フォワード）,BK（バックス）の平均身長、体重を表示できる
+  - 国別にFW（フォワード）BK（バックス）の平均身長、体重を表示できる
   - 新しいチーム,選手を登録できる
   - 既存の選手の修正,削除ができる
 
 ### Application 概要図
 ![概要図ファイル drawio (2)](https://github.com/Satoru-Oki/RugbyInfoApplication/assets/143796169/75bfec0e-e97d-466b-a8bd-8e030ddafc21)
 
-### 技術構成
+### 主な技術構成
 - Java 17
 - Spring Boot 3.1.4
 - Thymeleaf 3.1.2
@@ -27,21 +27,29 @@
 - MyBatis 3.5.13
 - MySQL 8.0
 - Docker 24.0.6
-  
+- その他
+  - CI（自動テスト,Checkstyle,Codecov)
+    
 ### DB定義
 テーブル名：rugby_players_world_cup
 |カラム名|データ型|キー|備考|
-| ---- | ---- | ---- | ----|
-| id | VARCHAR(30) | PRIMARY KEY|登録時自動生成|
-| nationality | VARCHAR(30) | |
-| name | VARCHAR(50) |||
-| height | INT(5) |
-| weight | INT(5) |
-| rugby_position | VARCHAR(50) ||
+| ---- | ---- | ---- | ---- |
+| id | VARCHAR(30) | PRIMARY KEY | 登録時自動生成
+| nationality | VARCHAR(30)  
+| name | VARCHAR(50) 
+| height | INT(5) 
+| weight | INT(5) 
+| rugby_position | VARCHAR(50) 
 
 ### URL一覧
-
-<img width="567" alt="image" src="https://github.com/Satoru-Oki/RugbyInfoApplication/assets/143796169/d6674197-c633-4fc1-90bf-929372c8c38e">
+| 機能 | 詳細 | URL | 備考 |
+| ---- | ---- |----|----|
+| チーム別検索 | 国別に選手を検索 |/rugbyPlayers?nationality={nationality} |parumはnullを許容
+| 選手検索 | 身長・体重・ポジションの組み合わせで選手を検索|/rugbyPlayers/reference?height={height}&weight={weight}&rugbyPosition={rugbyPosition}|parumはnullを許容
+| チーム別平均データ | チーム毎にFW、BKの平均身長・体重を表示 |/rugbyPlayers/average
+| 選手登録 | 選手を登録 |/rugbyPlayers/new | モーダル
+| 選手修正 | 選手データを更新 |/rugbyPlayers/edit/{id} | モーダル
+| 選手削除 | 選手データを削除 |/rugbyPlayers/delete/{id} 
 
 ### DEMO
 チーム別選手表示 
