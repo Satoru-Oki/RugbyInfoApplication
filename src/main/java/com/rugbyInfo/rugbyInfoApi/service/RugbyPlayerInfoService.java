@@ -26,16 +26,6 @@ public class RugbyPlayerInfoService {
         this.rugbyPlayerMapper = rugbyPlayerMapper;
     }
 
-    public void insertRugbyPlayers(List<RugbyPlayer> rugbyPlayersList) {
-        for (RugbyPlayer rugbyPlayer : rugbyPlayersList) {
-            Optional<RugbyPlayer> existingPlayer = rugbyPlayerMapper.findPlayerById(rugbyPlayer.getId());
-
-            if (existingPlayer.isEmpty()) {
-                rugbyPlayerMapper.insertPlayerData(rugbyPlayer);
-            }
-        }
-    }
-
     public record CategoryGroup(String category, List<PlayerDataResponse> players) {
     }
 
@@ -117,6 +107,16 @@ public class RugbyPlayerInfoService {
 
     public List<PositionGroupAverageResponse> findAverageByPositionGroupAndNationality() {
         return rugbyPlayerMapper.findAverageByPositionGroupAndNationality();
+    }
+
+    public void insertRugbyPlayers(List<RugbyPlayer> rugbyPlayersList) {
+        for (RugbyPlayer rugbyPlayer : rugbyPlayersList) {
+            Optional<RugbyPlayer> existingPlayer = rugbyPlayerMapper.findPlayerById(rugbyPlayer.getId());
+
+            if (existingPlayer.isEmpty()) {
+                rugbyPlayerMapper.insertPlayerData(rugbyPlayer);
+            }
+        }
     }
 
     public RugbyPlayer insertRugbyPlayers(PlayerCreateForm playerCreateForm) {

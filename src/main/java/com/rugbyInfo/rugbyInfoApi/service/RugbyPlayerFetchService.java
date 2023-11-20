@@ -32,7 +32,7 @@ public class RugbyPlayerFetchService {
     public List<RugbyPlayer> getDataFromExternalApi(List<String> competitorIds) {
         List<RugbyPlayer> allPlayers = new ArrayList<>();
 
-        for(String competitorId : competitorIds) {
+        for (String competitorId : competitorIds) {
             rateLimiter.acquire();
             String url = String.format(API_URL, competitorId) + "?api_key=" + API_KEY;
 
@@ -55,6 +55,7 @@ public class RugbyPlayerFetchService {
 
             allPlayers.addAll(players);
         }
+
         return allPlayers;
     }
 }
