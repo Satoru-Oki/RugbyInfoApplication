@@ -21,7 +21,7 @@
 　安定した環境を捨てあらたな道への一歩としてこの大会にちなんだアプリケーションを作成することとした。
 
 `ラグビーは少年をいち早く大人にし、大人に永遠に少年の魂を抱かせる`  
-by Jean-Pierre Rives （1975-1984　フランス代表キャプテン）
+　by Jean-Pierre Rives （1975-1984　フランス代表キャプテン）
 
 ### Application 概要図
 ![概要図ファイル drawio (2)](https://github.com/Satoru-Oki/RugbyInfoApplication/assets/143796169/75bfec0e-e97d-466b-a8bd-8e030ddafc21)
