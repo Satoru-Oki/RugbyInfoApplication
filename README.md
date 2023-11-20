@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/gh/Satoru-Oki/RugbyInfoApplication/graph/badge.svg?token=HWS58KBUOY)](https://codecov.io/gh/Satoru-Oki/RugbyInfoApplication)
+
 ## RugbyInfoApplication
 <img width="600" alt="image" src="https://github.com/Satoru-Oki/RugbyInfoApplication/assets/143796169/cee51615-75a5-4347-995b-c433f1bdd26d">
 
