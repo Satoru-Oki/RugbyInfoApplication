@@ -28,7 +28,7 @@
 - MySQL 8.0
 - Docker 24.0.6
 - その他
-  - CI（自動テスト,Checkstyle,Codecov)
+  - CI（自動テスト,Checkstyle,Codecov）
     
 ### DB定義
 テーブル名：rugby_players_world_cup
