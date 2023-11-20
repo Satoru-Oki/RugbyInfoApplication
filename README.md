@@ -1,3 +1,4 @@
+[![rugby-info-api-ci](https://github.com/Satoru-Oki/RugbyInfoApplication/actions/workflows/ci.yml/badge.svg)](https://github.com/Satoru-Oki/RugbyInfoApplication/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/Satoru-Oki/RugbyInfoApplication/graph/badge.svg?token=HWS58KBUOY)](https://codecov.io/gh/Satoru-Oki/RugbyInfoApplication)
 
 ## RugbyInfoApplication
