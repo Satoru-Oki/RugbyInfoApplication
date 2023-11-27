@@ -1,8 +1,12 @@
 [![rugby-info-api-ci](https://github.com/Satoru-Oki/RugbyInfoApplication/actions/workflows/ci.yml/badge.svg)](https://github.com/Satoru-Oki/RugbyInfoApplication/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/Satoru-Oki/RugbyInfoApplication/graph/badge.svg?token=HWS58KBUOY)](https://codecov.io/gh/Satoru-Oki/RugbyInfoApplication)
 
+
 ## RugbyInfoApplication
 <img width="600" alt="image" src="https://github.com/Satoru-Oki/RugbyInfoApplication/assets/143796169/cee51615-75a5-4347-995b-c433f1bdd26d">
+
+### URL
+http://52.196.173.169:8080/rugbyPlayers
 
 ### 概要  
 外部APIからラグビーワールドカップ出場国選手のデータを取得、取得データおよび任意のチーム・選手を表示・検索・登録・修正できるアプリケーション
@@ -83,8 +87,8 @@
 ![選手登録 (1)](https://github.com/Satoru-Oki/RugbyInfoApplication/assets/143796169/3b1fa986-e893-498d-b1e7-0b2a00e3fc2b)
 
 ### 今後について
-- アプリケーションの常駐
-- Https化
+- https化
+- 選手データテーブルの追加（試合でのパフォーマンスデータ）
 など
 
 
