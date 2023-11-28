@@ -63,7 +63,7 @@ https://rugby-player-info.com/rugbyPlayers
 | 選手削除 | 選手データを削除 |/rugbyPlayers/delete/{id} 
 
 ### インフラ構成図
-![インフラ構成図 drawio (1)](https://github.com/Satoru-Oki/RugbyInfoApplication/assets/143796169/627f9778-4bd0-47a4-9d98-4d7d5ad01057)
+![インフラ構成図 drawio (3)](https://github.com/Satoru-Oki/RugbyInfoApplication/assets/143796169/1129c54b-2176-4033-8fa0-d1cffaa41063)
 
 ### DEMO
 チーム別選手表示 
