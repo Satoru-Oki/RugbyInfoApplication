@@ -37,7 +37,7 @@ https://rugby-player-info.com/rugbyPlayers
 - Tomcat(Embedded) 10.1.13
 - MyBatis 3.5.13
 - MySQL 8.0
-- Docker 24.0.6
+- Docker 24.0.6（デプロイ前）
 - その他
   - CI（自動テスト,Checkstyle,Codecov）
     
