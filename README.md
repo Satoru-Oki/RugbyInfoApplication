@@ -6,7 +6,7 @@
 <img width="600" alt="image" src="https://github.com/Satoru-Oki/RugbyInfoApplication/assets/143796169/cee51615-75a5-4347-995b-c433f1bdd26d">
 
 ### URL
-http://52.196.173.169:8080/rugbyPlayers
+https://rugby-player-info.com/rugbyPlayers
 
 ### 概要  
 外部APIからラグビーワールドカップ出場国選手のデータを取得、取得データおよび任意のチーム・選手を表示・検索・登録・修正できるアプリケーション
@@ -87,8 +87,8 @@ http://52.196.173.169:8080/rugbyPlayers
 ![選手登録 (1)](https://github.com/Satoru-Oki/RugbyInfoApplication/assets/143796169/3b1fa986-e893-498d-b1e7-0b2a00e3fc2b)
 
 ### 今後について
-- https化
 - 選手データテーブルの追加（試合でのパフォーマンスデータ）
+- パフォーマンスデータの平均との比較、top5の表示
 など
 
 
