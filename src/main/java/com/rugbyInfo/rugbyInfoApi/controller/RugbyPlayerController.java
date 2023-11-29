@@ -32,6 +32,11 @@ public class RugbyPlayerController {
         this.rugbyPlayerInfoService = rugbyPlayerInfoService;
     }
 
+    @GetMapping()
+    public String getToppage(Model model) {
+        return "toppage";
+    }
+
     @GetMapping("/rugbyPlayers")
     public String getRugbyPlayers(Model model, @RequestParam Optional<String> nationality) {
         List<String> nationalities = rugbyPlayerInfoService.getAvailableNationalities();

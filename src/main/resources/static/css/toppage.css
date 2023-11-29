@@ -1,0 +1,63 @@
+body {
+    font-family:  'M PLUS Rounded 1c', sans-serif;
+    background-color: #e7e7e7;
+    margin: 0;
+    padding: 20px;
+    background-image: url('../css/publicdomainq-0003262xrwkpw.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+h1 {
+
+    margin: 50px;
+    font-size: 40px;
+    color: white;
+    flex-grow: 1;
+}
+
+.nav-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #5cb85c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+   margin-right: 10px;
+}
+
+.nav-button:hover {
+    background-color: #4cae4c;
+}
+
+.category-header {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+    font-size: 28px;
+    margin-top: 40px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
