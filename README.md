@@ -3,10 +3,10 @@
 
 
 ## RugbyInfoApplication
-<img width="600" alt="image" src="https://github.com/Satoru-Oki/RugbyInfoApplication/assets/143796169/cee51615-75a5-4347-995b-c433f1bdd26d">
+<img width="800" alt="image" src="https://github.com/Satoru-Oki/RugbyInfoApplication/assets/143796169/612400a1-8221-42da-87b2-1ec89c1827b1">
 
 ### URL
-https://rugby-player-info.com/rugbyPlayers
+https://rugby-player-info.com
 
 ### 概要  
 外部APIからラグビーワールドカップ出場国選手のデータを取得、取得データおよび任意のチーム・選手を表示・検索・登録・修正できるアプリケーション
@@ -55,6 +55,7 @@ https://rugby-player-info.com/rugbyPlayers
 ### URL一覧
 | 機能 | 詳細 | URL | 備考 |
 | ---- | ---- |----|----|
+| トップページ | | https://rugby-player-info.com
 | チーム別検索 | 国別に選手を検索 |/rugbyPlayers?nationality={nationality} |parumはnullを許容
 | 選手検索 | 身長・体重・ポジションの組み合わせで選手を検索|/rugbyPlayers/reference?height={height}&weight={weight}&rugbyPosition={rugbyPosition}|parumはnullを許容
 | チーム別平均データ | チーム毎にFW、BKの平均身長・体重を表示 |/rugbyPlayers/average
